@@ -6,13 +6,13 @@
 
 #include "SPI.h"
 #include "Ethernet.h"
-#include <ArduinoJson.h>								//you have to download this library first
+#include <ArduinoJson.h>   //you have to download this library first
 
 char server[] = "iotcampus.net";
 String apikey = "yourAPIkey";
 String kirim = "/jiiot/api/kirim.php?key=" + apikey;
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };	//your MAC address
-IPAddress ip(192, 168, xxx, xxx);						//your ip address
+IPAddress ip(192, 168, xxx, xxx);  //your ip address
 EthernetClient client;
 
 //config for timer checking connection
@@ -24,7 +24,6 @@ long lastConnectionTimeTalkBack = 0;
 boolean lastConnectedTalkBack = false;
 int failedCounterTalkBack = 0;
 
-String qCMD;
 String respKirim;
 
 void setup(){
@@ -34,7 +33,7 @@ void setup(){
 
 void loop(){
   updateChannels(sensorName, sensorValue);		//send sensor value and sensor name
-  delay(60000);									//delay one minutes
+  delay(60000);   //delay one minutes
 }
 
 void updateChannels(String senName, String senValue){

@@ -1,7 +1,16 @@
 # jiiot-client
-Send data from microcontroller (arduino or esp8266) to JiIOT server using GET method.
+Send data from microcontroller (arduino with ethernet shield or esp8266) to JiIOT server using GET method.
 
 In this repository there are two folders containing the code for arduino and esp8266. In each folder there are an examples how to using this code for a simple implementation.
+
+- You can get your API key in http://iotcampus.net/jiiot/index.php?menu=sensor
+- Reading some a little documentations in http://iotcampus.net/jiiot/index.php?menu=docs
+- But you have to register or signup in here http://iotcampus.net/jiiot/register.php
+- After register and verification, you can login and access your dashboard at http://iotcampus.net/jiiot
+
+Arduino using
+- board : UNO, NANO (using esp8266 for client request), MEGA2560
+- shield : ethernet shield W5100
 
 Esp8266 chip using
 - firmware : LUA 
@@ -26,7 +35,7 @@ a. Arduino :
 
   1. UNO (DIP, SMD, clone)
   2. Mega2560
-  3. NANO
+  3. NANO (using esp8266 for client request)
   
 b. Esp8266 :
 
